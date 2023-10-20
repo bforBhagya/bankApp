@@ -55,8 +55,30 @@ mvn clean install
 This will download dependencies and create an executable JAR file.
 
 ## 🎛️ Configuration
+Follow these steps to configure the Bank App using the application.yaml file:
 
-The Bank App can be configured using the `application.yaml` file. You can modify database settings, server port, and other configuration parameters in this file.
+  Access the application.yaml File: Locate the application.yaml file in your Bank App project. It is typically found in the src/main/resources directory.
+
+  Open the application.yaml File: Use your preferred text editor or integrated development environment (IDE) to open the application.yaml file.
+
+  Add Email Settings:
+
+  To configure email functionality, you need to provide the following email settings:
+    yaml
+    spring:
+      mail:
+        username: your-email@example.com
+        password: your-email-password
+
+  Replace your-email@example.com with the email address from which you want to send notifications, and your-email-password with the corresponding email password.
+
+  Save the File: After adding the email settings, save the application.yaml file.
+
+Video Tutorial - https://www.youtube.com/watch?v=nuD6qNAurVM&t=2s
+
+For a visual guide on configuring the application.yaml file, you can refer to this YouTube video. The video provides step-by-step instructions on configuring the Bank App's email settings.
+With the email settings properly configured, the Bank App will be able to send email notifications for various account activities, enhancing the user experience and communication.
+Please ensure that you keep your email credentials secure and do not share them publicly or store them in version-controlled repositories for security reasons.
 
 ## ◽ Usage
 
