@@ -43,6 +43,14 @@ public class UserController {
         return userServiceInterface.balanceEnquiry(enquiryRequest);
     }
 
+    @Operation(
+            summary = "Name Enquiry",
+            description = "Given an account number, Check the user's full name"
+    )
+    @ApiResponse(
+            responseCode = "201",
+            description = "Http Status 200 SUCCESS"
+    )
     @GetMapping("/nameEnquiry")
     public String nameEnquiry(@RequestBody EnquiryRequest enquiryRequest) {
 
