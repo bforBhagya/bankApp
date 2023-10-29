@@ -55,16 +55,16 @@ mvn clean install
 This will download dependencies and create an executable JAR file.
 
 ## 🎛️ Configuration
-Follow these steps to configure the Bank App using the application.yaml file:
+Follow these steps to configure the Bank App using the application.yml file:
 
-  Access the application.yaml File: Locate the application.yaml file in your Bank App project. It is typically found in the src/main/resources directory.
+  Access the application.yml File: Locate the application.yml file in your Bank App project. It is typically found in the src/main/resources directory.
 
-  Open the application.yaml File: Use your preferred text editor or integrated development environment (IDE) to open the application.yaml file.
+  Open the application.yml File: Use your preferred text editor or integrated development environment (IDE) to open the application.yml file.
 
   Add Email Settings:
 
   To configure email functionality, you need to provide the following email settings:
-    yaml
+    yml
     spring:
       mail:
         username: your-email@example.com
@@ -72,11 +72,11 @@ Follow these steps to configure the Bank App using the application.yaml file:
 
   Replace your-email@example.com with the email address from which you want to send notifications, and your-email-password with the corresponding email password.
 
-  Save the File: After adding the email settings, save the application.yaml file.
+  Save the File: After adding the email settings, save the application.yml file.
 
 Video Tutorial - https://www.youtube.com/watch?v=nuD6qNAurVM&t=2s
 
-For a visual guide on configuring the application.yaml file, you can refer to this YouTube video. The video provides step-by-step instructions on configuring the Bank App's email settings.
+For a visual guide on configuring the application.yml file, you can refer to this YouTube video. The video provides step-by-step instructions on configuring the Bank App's email settings.
 With the email settings properly configured, the Bank App will be able to send email notifications for various account activities, enhancing the user experience and communication.
 Please ensure that you keep your email credentials secure and do not share them publicly or store them in version-controlled repositories for security reasons.
 
@@ -102,6 +102,14 @@ The Bank App provides the following API endpoints for interacting with the appli
 - `POST /api/transfer` - Transfer funds between accounts.
 
 You can use tools like `curl`, [Postman](https://www.postman.com/), or your web browser to interact with these endpoints.
+
+### 📖 Swagger UI Documentation
+
+You can access the Swagger UI documentation for the Bank App by clicking on the following link:
+
+[Swagger UI Documentation](http://localhost:8080/swagger-ui/index.html#/)
+
+If this doesn't work copy this URL and replace YOUR PORT with PORT, then paste and run on your browser : http://localhost:PORT/swagger-ui/index.html#/
 
 ## 💯 Testing
 
