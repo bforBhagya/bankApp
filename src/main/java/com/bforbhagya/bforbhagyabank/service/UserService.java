@@ -5,13 +5,16 @@ import com.bforbhagya.bforbhagyabank.entity.User;
 import com.bforbhagya.bforbhagyabank.repository.UserRepository;
 import com.bforbhagya.bforbhagyabank.serviceInterface.UserServiceInterface;
 import com.bforbhagya.bforbhagyabank.utils.AccountUtils;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
 @Service
+@AllArgsConstructor
 public class UserService implements UserServiceInterface {
     @Autowired
     UserRepository userRepository;
@@ -19,6 +22,8 @@ public class UserService implements UserServiceInterface {
     EmailService emailService;
     @Autowired
     TransactionService transactionService;
+    @Autowired
+    PasswordEncoder passwordEncoder;
 
     @Override
     public BankResponse createAccount(UserRequest userRequest) {
@@ -39,6 +44,7 @@ public class UserService implements UserServiceInterface {
                 .stateOfOrigin(userRequest.getStateOfOrigin())
                 .accountNumber(AccountUtils.generateAccountNumber())
                 .email(userRequest.getEmail())
+                .password(passwordEncoder.encode(userRequest.getPassword()))
                 .accountBalance(BigDecimal.ZERO)
                 .phoneNumber(userRequest.getPhoneNumber())
                 .alternativePhoneNumber(userRequest.getAlternativePhoneNumber())
